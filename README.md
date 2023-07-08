@@ -4,8 +4,8 @@
 - **user:** stores organisation information.
 ## Customer
 - **customer**: stores customer information
-- **customer_address**: contains billing and shipping address for each customer with ![foreign key constraints] of customer table
-- **contact_person**: Stores contact information for each customer with ![foreign key constraints] of customer table
+- **customer_address**: contains billing and shipping address for each customer with ![foreign key constraints](https://img.shields.io/badge/Foreign%20Key-Constraints-brightgreen) of customer table
+- **contact_person**: Stores contact information for each customer with ![foreign key constraints](https://img.shields.io/badge/Foreign%20Key-Constraints-brightgreen) of customer table
 
 ## Item
 - **item**: stores product information
