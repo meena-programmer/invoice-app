@@ -1,6 +1,6 @@
 # invoice-app
-# Table Hierarchy - Invoice Management System
-## User : stores organisation information.
+## Table Hierarchy - Invoice Management System
+## User ###: stores organisation information.
 ## Customer
 - **customer_address**: contains billing and shipping address for each customer with foreign key constrains of customer table
 - **contact_person**: Stores contact information for each customer with foreign key constrains of customer table
