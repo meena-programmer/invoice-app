@@ -13,13 +13,13 @@
 
 ## Invoice
 - **invoice**: stores invoice information
-- **invoice_item**: Stores the details of items with foreign key constrains of invoice table.
-- **recurring_invoice**: Stores information about recurring invoices with foreign key constrains of invoice table.
+- **invoice_item**: Stores the details of items with ![foreign key constraints](https://img.shields.io/badge/Foreign%20Key-Constraints-brightgreen) of invoice table.
+- **recurring_invoice**: Stores information about recurring invoices with ![foreign key constraints](https://img.shields.io/badge/Foreign%20Key-Constraints-brightgreen) of invoice table.
 - **tax**: Stores common tax-related information.
 
 ## Credit Notes
 - **credit_notes**: stores Credit Notes information
-- **credit_notes_item**: Stores the details of items included in each credit note with foreign key constrains of credit_notes table
+- **credit_notes_item**: Stores the details of items included in each credit note with ![foreign key constraints of credit_notes table](https://img.shields.io/badge/Foreign%20Key-Constraints-brightgreen)
 
 ## Estimates
 - **estimates**: stores Estimation Invoice information
