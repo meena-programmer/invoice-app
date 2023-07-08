@@ -1,0 +1,596 @@
+{
+	"info": {
+		"_postman_id": "b8300cf7-ef9c-4d7a-b9cb-9cf327e3adfc",
+		"name": "INVOICE-APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17963848"
+	},
+	"item": [
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Meenatchi\",\n    \"mobile\": 111,\n    \"password\": \"xyz\",\n    \"confirmPassword\":\"xyz\",\n    \"companyName\": \"vebbox\",\n    \"company_address\": \"123\",\n    \"company_website\": \"vebbox.com\",\n    \"email\": \"Meenatchi111@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user_id",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "auth_token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":111,\n    \"password\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTgsImlhdCI6MTY4ODUzOTU3MiwiZXhwIjoxNjg4NjI1OTcyfQ.cdDnHEigZBvfQMTMFnAYYu2dspL6TEyhaX8tYzNBVkU",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"item_type\": \"sales\",\n    \"product_type\": \"goods\",\n    \"name\": \"Pendrive\",\n    \"rate\": 400,\n    \"unit\": \"GB\",\n    \"description\": \"\",\n    \"sku\": \"\",\n    \"tax_id\": \"\",\n    \"tax_type\": \"\",\n    \"tax_exemption_id\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/item/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customerAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"display_name\": \"Red cloud\",\n    \"type\": \"Sales\",\n    \"shipping_address\": {\n        \"attention\": \"Meenatchi\",\n        \"address_line1\": \"address_line1\",\n        \"address_line2\": \"address_line2\",\n        \"city\": \"Chennai\",\n        \"state\": \"TN\",\n        \"zip_code\": \"600041\",\n        \"fax\": \"123\",\n        \"contact\": \"123123\",\n        \"email\": \"abc@gmail.com\"\n    },\n    \"billing_address\": {\n        \"attention\": \"Bavani\",\n        \"address_line1\": \"address_line1\",\n        \"address_line2\": \"address_line2\",\n        \"city\": \"Chennai\",\n        \"state\": \"TN\",\n        \"zip_code\": \"600041\",\n        \"fax\": \"123\",\n        \"contact\": \"123123\",\n        \"email\": \"abc@gmail.com\"\n    },\n    \"contact_persons\": [\n        {\n            \"name\": \"abc\",\n            \"contact\": \"123123\",\n            \"email\": \"abc@gmail.com\",\n            \"designation\": \"design\",\n            \"department\": \"UI\"\n        },\n        {\n            \"name\": \"xyz\",\n            \"contact\": \"123123\",\n            \"email\": \"abc@gmail.com\",\n            \"designation\": \"design\",\n            \"department\": \"UI\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoiceAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\":\"CST00000001\",\n    \"reference_id\":\"123\",\n    \"payment_terms\":\"15\",\n    \"payment_terms_label\":\"NET 15\",\n    \"invoice_date\":\"2023-07-05 23:59:59\",\n    \"due_date\":\"2023-12-31 23:59:59\",\n    \"notes\":\"welcome\",\n    \"terms\":\"terms and condition\",\n    \"subject\":\"invoice creation\",\n    \"sub_total\":50,\n    \"discount\":5,\n    \"discount_type\":\"entity leve\",\n    \"adjustment\":1.50,\n    \"total\":55,\n    \"allow_partial_payment\":true,\n    \"shipping_charge\":0,\n    \"payment_status\":\"PENDING\",\n    \"line_items\":[\n        {\n            \"item_id\":\"PR0000000001\",\n            \"item_order\":1,\n            \"rate\":20,\n            \"quantity\":2,\n            \"amount\":40,\n            \"discount\":0,\n            \"description\":\"good\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/invoice/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invoice",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": \"CST00000001\",\n    \"payment_mode\": \"CASH\",\n    \"description\": \"\",\n    \"reference_id\": \"777\",\n    \"payment_date\": \"2023-07-05 23:59:59\",\n    \"amount\": 50,\n    \"invoices\": {\n        \"invoice_id\": \"IV00001\",\n        \"amount\": 55\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/payment/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"payment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recurringInvoiceAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": \"CST00000001\",\n    \"reference_id\": \"123\",\n    \"payment_terms\": \"15\",\n    \"payment_terms_label\": \"NET 15\",\n    \"invoice_date\": \"2023-07-05 23:59:59\",\n    \"due_date\": \"2023-12-31 23:59:59\",\n    \"notes\": \"welcome\",\n    \"terms\": \"terms and condition\",\n    \"subject\": \"invoice creation\",\n    \"sub_total\": 50,\n    \"discount\": 5,\n    \"discount_type\": \"entity leve\",\n    \"adjustment\": 1.50,\n    \"total\": 55,\n    \"allow_partial_payment\": true,\n    \"shipping_charge\": 0,\n    \"payment_status\": \"PENDING\",\n    \"recurrance_name\": \"Meenatchi\",\n    \"recurrance_start\": \"2023-07-05 23:59:59\",\n    \"recurrance_end\": \"\",\n    \"repeat_every\": 1,\n    \"recurrance_frequency\": \"Weeks\",\n    \"line_items\": [\n        {\n            \"item_id\": \"PR0000000001\",\n            \"item_order\": 1,\n            \"rate\": 20,\n            \"quantity\": 2,\n            \"amount\": 40,\n            \"discount\": 0,\n            \"description\": \"good\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/recurringinvoice/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recurringinvoice",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditNotesAdd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": \"CST00000001\",\n    \"reference_no\": \"123\",\n    \"notes\": \"notes\",\n    \"date\":\"2023-12-31 23:59:59\",\n    \"terms\": \"terms\",\n    \"subject\": \"subject\",\n    \"discount\": 5,\n    \"discount_type\": \"entity level\",\n    \"sub_total\": 50,\n    \"total\": 60,\n    \"tax_id\": \"\",\n    \"adjustment\": 5,\n    \"line_items\": [\n        {\n            \"item_id\": \"PR0000000001\",\n            \"item_order\": 1,\n            \"rate\": 20,\n            \"quantity\": 2,\n            \"amount\": 40,\n            \"discount\": 0,\n            \"description\": \"good\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/creditnotes/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"creditnotes",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditApplytoinvoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"credit_notes_id\": \"CRNT00001\",\n    \"invoices\": [\n        {\n            \"invoice_id\": \"IV00001\",\n            \"amount_applied\": 5\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/creditnotes/applytoinvoice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"creditnotes",
+						"applytoinvoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendInvoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					},
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"invoice_id\":\"INV-202300001\",\n    \"project_id\":\"IV00001\",\n    \"email_id\":\"meena.programmer@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/invoice/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invoice",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemGet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTcsImlhdCI6MTY4ODQ3NjY3NiwiZXhwIjoxNjg4NTYzMDc2fQ.bqK451Jv2xur5d57oh3DpI6s5-sYMRlElguNxF1lmXs",
+						"type": "text"
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/item/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customerGet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImlhdCI6MTY4ODQ3MzI3MiwiZXhwIjoxNjg4NTU5NjcyfQ.cRwpe1n3J8b40PB0x5RFUxf5xMiiF-16FobEnfyOdXs",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/customer/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoiceGet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTcsImlhdCI6MTY4ODQ3NjY3NiwiZXhwIjoxNjg4NTYzMDc2fQ.bqK451Jv2xur5d57oh3DpI6s5-sYMRlElguNxF1lmXs",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"SDD\",\n    \"rate\":600,\n    \"unit\":\"BB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/invoice/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"invoice",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditNotesGet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/creditnotes/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"creditnotes",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paymentGet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/payment/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"payment",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recurringInvoiceGet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "organization_id",
+						"value": "ORG00001",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/recurringinvoice/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"recurringinvoice",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
