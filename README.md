@@ -4,8 +4,8 @@
 - **user:** stores organisation information.
 ## Customer
 - **customer**: stores customer information
-- **customer_address**: contains billing and shipping address for each customer with foreign key constrains of customer table
-- **contact_person**: Stores contact information for each customer with foreign key constrains of customer table
+- **customer_address**: contains billing and shipping address for each customer with ![foreign key constraints] of customer table
+- **contact_person**: Stores contact information for each customer with ![foreign key constraints] of customer table
 
 ## Item
 - **item**: stores product information
