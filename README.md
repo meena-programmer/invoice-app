@@ -21,6 +21,11 @@ An invoice management backend app is a software application designed to the proc
 - Go to /resources/sql/queries.sql
 - Run queries. change database name if require in queries.sql file as well as in .env.
 
+### Postman Collection
+
+- Go to /resources/postman-collection/INVOICE-APP.postman_collection.json
+- import in postman for api testing.
+
 Clone the project
 
 ```bash
