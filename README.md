@@ -23,9 +23,8 @@ Clone the project
 ```
 Run Sql queries
 
-```bash
-  /resources/sql/queries.sql
-```
+ Go to /resources/sql/queries.sql
+
 
 Go to the project directory
 
