@@ -16,14 +16,16 @@ An invoice management backend app is a software application designed to the proc
 **Database:** MYSQL
 ## Run Locally
 
+### Run Sql queries
+
+- Go to /resources/sql/queries.sql
+- Run queries. change database name if require in queries.sql file as well as in .env.
+
 Clone the project
 
 ```bash
   git clone https://github.com/meena-programmer/invoice-app
 ```
-Run Sql queries
-
-- Go to /resources/sql/queries.sql
 
 Go to the project directory
 
