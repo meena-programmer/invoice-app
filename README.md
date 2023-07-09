@@ -23,8 +23,7 @@ Clone the project
 ```
 Run Sql queries
 
- Go to /resources/sql/queries.sql
-
+- Go to /resources/sql/queries.sql
 
 Go to the project directory
 
