@@ -1,5 +1,5 @@
 # invoice-app
-## Table Hierarchy - Invoice Management System
+## Table Hierarchy
 ## User 
 - **user:** stores organisation information.
 ## Customer
