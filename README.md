@@ -105,7 +105,7 @@ In Config/mail_config.js, change mail transporter.
 
 #### Insert user
 ```http
-  POST /user/register
+   POST /user/register
 ```
 - Request Body:
 - ```
