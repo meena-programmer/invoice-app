@@ -13,7 +13,7 @@ An invoice management backend app is a software application designed to the proc
 
 **Server:** Node, Express
 
-**Databar:** MYSQL
+**Database:** MYSQL
 ## Run Locally
 
 Clone the project
