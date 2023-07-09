@@ -21,6 +21,11 @@ Clone the project
 ```bash
   git clone https://github.com/meena-programmer/invoice-app
 ```
+Run Sql queries
+
+```bash
+  /resources/sql/queries.sql
+```
 
 Go to the project directory
 
